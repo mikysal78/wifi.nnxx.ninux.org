@@ -1,0 +1,21 @@
+- hosts: CaptivePortal
+  become: "{{ become | default('yes') }}"
+  roles:
+    - geerlingguy.certbot
+    - openwisp-wifi-login-pages
+  vars:
+    # Captive Portal
+    wifi_login_pages_domains: ["wifi.nnxx.ninux.org"]
+    wifi_login_pages_ssl_cert: "/etc/letsencrypt/live/{{ inventory_hostname }}/fullchain.pem"
+    wifi_login_pages_ssl_key: "/etc/letsencrypt/live/{{ inventory_hostname }}/privkey.pem"
+      
+    # certbot configuration
+    certbot_auto_renew_minute: "20"
+    certbot_auto_renew_hour: "5"
+    certbot_create_if_missing: true
+    certbot_auto_renew_user: "root"
+    certbot_certs:
+      - email: "openwisp.basilicata@gmail.com"
+        domains:
+          - "{{ inventory_hostname }}"
+
