@@ -1,6 +1,6 @@
 ---
 name: "Basilicata"
-slug: "default"
+slug: "basilicata"
 
 settings:
   mobile_phone_verification: false
@@ -9,7 +9,8 @@ settings:
 # configuration variables for the server app
 server:
   # put the URL of openwisp-radius here
-  host: "http://127.0.0.1:8000"
+  #  host: "http://127.0.0.1:8000"
+  host: "controller.nnxx.ninux.org"
   uuid: cc07a8ae-2026-42ff-a9f1-bb050bd8bf8e
   secret_key: vvWb7rgYqeAm41q9Vbc0ifO3eaWbaguq
   timeout: 2 #request timeout period in seconds
@@ -189,7 +190,7 @@ client:
 
     captive_portal_login_form:
       method: post
-      action: http://localhost:8000/captive-portal-mock/login/
+      action: http://controller.nnxx.ninux.org/captive-portal-mock/login/
       fields:
         username: auth_user
         password: auth_pass
@@ -198,13 +199,13 @@ client:
         - name: zone
           value: zone_name
         - name: redirurl
-          value: http://localhost:8080/default/status
+          value: http://controller.nnxx.ninux.org/default/status
         - name: accept
           value: accept
 
     captive_portal_logout_form:
       method: post
-      action: http://localhost:8000/captive-portal-mock/logout/
+      action: http://controller.nnxx.ninux.org/captive-portal-mock/logout/
       fields:
         id: logout_id
       additional_fields: []

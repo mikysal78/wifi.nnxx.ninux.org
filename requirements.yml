@@ -1,0 +1,6 @@
+---
+roles:
+  - src: https://github.com/openwisp/ansible-openwisp-wifi-login-pages.git
+    version: master
+    name: openwisp-wifi-login-pages
+  - src: geerlingguy.certbot

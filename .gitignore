@@ -1,0 +1,5 @@
+private_hosts
+*.retry
+*.swp
+roles
+.ansible_cache
