@@ -4,7 +4,7 @@ slug: "basilicata"
 
 settings:
   mobile_phone_verification: false
-  subscriptions: true
+  subscriptions: false
 
 # configuration variables for the server app
 server:
@@ -63,9 +63,9 @@ client:
     footer:
       links:
         - text:
-            en: "link-1"
-            it: "link-1"
-          url: "https://link-1.com"
+            en: "Ninux - Wireless Community Network"
+            it: "Ninux - Wireless Community Network"
+          url: "https://ninux.org"
           authenticated: false
         - text:
             en: "link-2"
