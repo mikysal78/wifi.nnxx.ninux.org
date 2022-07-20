@@ -134,7 +134,7 @@ client:
 
     contact_page:
       email: "ninux.basilicata@gmail.com"
-      helpdesk: "+39 3495432617"
+      # helpdesk: "+39 3495432617"
       social_links:
         - alt:
             en: "twitter"
@@ -146,6 +146,11 @@ client:
             it: "facebook"
           icon: "facebook.svg"
           url: "https://www.facebook.com/groups/ninux.basilicata"
+        - alt:
+            en: "telegram"
+            it: "telegram"
+          icon: "Telegram_logo.svg"
+          url: "https://t.me/ninuxorg"
 
     status_page:
       links:
@@ -153,25 +158,9 @@ client:
             en: "Change your password"
             it: "Cambia la password"
           url: "/{orgSlug}/change-password/"
-
     login_form:
       social_login:
-        links:
-          - text:
-              en: "Login with Facebook"
-              it: "Login con Facebook"
-            url: "#facebook"
-            icon: "facebook.svg"
-          - text:
-              en: "Login with Google"
-              it: "Login con Google"
-            icon: "google.svg"
-            url: "#google"
-          - text:
-              en: "Login with Twitter"
-              it: "Login con Twitter"
-            icon: "twitter.svg"
-            url: "#twitter"
+        links: null
       input_fields:
         username:
           type: "email"
@@ -201,7 +190,7 @@ client:
 
     captive_portal_login_form:
       method: post
-      action: https://controller.nnxx.ninux.org/captive-portal-mock/login/
+      action: "http://192.168.182.1:3990/login/"
       fields:
         username: auth_user
         password: auth_pass
@@ -210,13 +199,13 @@ client:
         - name: zone
           value: zone_name
         - name: redirurl
-          value: https://controller.nnxx.ninux.org/basilicata/status
+          value: "http://192.168.182.1:3990/status"
         - name: accept
           value: accept
 
     captive_portal_logout_form:
       method: post
-      action: https://controller.nnxx.ninux.org/captive-portal-mock/logout/
+      action: "http://192.168.182.1:3990/logout/"
       fields:
         id: logout_id
       additional_fields: []
