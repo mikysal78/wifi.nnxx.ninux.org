@@ -68,11 +68,10 @@ client:
           url: "https://ninux.org"
           authenticated: false
         - text:
-            en: "link-2"
-            it: "link-2"
-          url: "https://link-2.com"
-          authenticated: true
-          verified: false
+            en: "OpenWISP2"
+            it: "OpenWISP2"
+          url: "https://openwisp.org/"
+          authenticated: false
         - text:
             en: "link-3"
             it: "link-3"
@@ -199,13 +198,13 @@ client:
         - name: zone
           value: zone_name
         - name: redirurl
-          value: "http://192.168.182.1:3990/status"
+          value: "https://wifi.nnxx.ninux.org/basilicata/status"
         - name: accept
           value: accept
 
     captive_portal_logout_form:
       method: post
-      action: "http://192.168.182.1:3990/logout/"
+      action: "https://wifi.nnxx.ninux.org/basilicata/logout/"
       fields:
         id: logout_id
       additional_fields: []
