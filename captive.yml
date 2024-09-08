@@ -1,21 +1,28 @@
 - hosts: CaptivePortal
   become: "{{ become | default('yes') }}"
   roles:
-    - geerlingguy.certbot
     - openwisp-wifi-login-pages
   vars:
     # Captive Portal
     wifi_login_pages_domains: ["wifi.nnxx.ninux.org"]
-    wifi_login_pages_ssl_cert: "/etc/letsencrypt/live/{{ inventory_hostname }}/fullchain.pem"
-    wifi_login_pages_ssl_key: "/etc/letsencrypt/live/{{ inventory_hostname }}/privkey.pem"
-      
-    # certbot configuration
-    certbot_auto_renew_minute: "20"
-    certbot_auto_renew_hour: "5"
-    certbot_create_if_missing: true
-    certbot_auto_renew_user: "root"
-    certbot_certs:
-      - email: "openwisp.basilicata@gmail.com"
-        domains:
-          - "{{ inventory_hostname }}"
+    wifi_login_pages_ssl_cert: "/etc/ssl/openwisp/fullchain.pem"
+    wifi_login_pages_ssl_key: "/etc/ssl/openwisp/key.pem"
 
+  # Let's
+#  pre_tasks:
+#    - name: Update APT package cache
+#      apt:
+#        update_cache: true
+#      changed_when: false
+#      retries: 5
+#      delay: 10
+#      register: result
+#      until: result is success
+#    - name: Creates temp directory ansible
+#      file:
+#        path: /var/www/.ansible/tmp
+#        state: directory
+#        owner: www-data
+#        group: www-data
+#        mode: 0777
+#        recurse: yes

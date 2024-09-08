@@ -9,8 +9,8 @@ settings:
 # configuration variables for the server app
 server:
   # put the URL of openwisp-radius here
-  host: "https://controller.nnxx.ninux.org"
-  uuid: "cc07a8ae-2026-42ff-a9f1-bb050bd8bf8e"
+  host: "https://openwisp.nnxx.ninux.org"
+  uuid: "915fd5db-8912-48a0-affa-8c79ac815904"
   secret_key: "vvWb7rgYqeAm41q9Vbc0ifO3eaWbaguq"
   timeout: 2 #request timeout period in seconds
 
@@ -18,6 +18,7 @@ server:
 # Path of all the assets should be defined relative to the organization's folder
 # in assets directory.
 client:
+
   auto_login: True
 
   # path of favicon
@@ -32,7 +33,7 @@ client:
   languages:
     - text: "english"
       slug: "en"
-    - text: "italian"
+    - text: "italiano"
       slug: "it"
   default_language: "it"
   components:
@@ -43,7 +44,7 @@ client:
       links:
         - text:
             en: "Sign In"
-            it: "Entra"
+            it: "Accedi"
           url: "/{orgSlug}/login"
           authenticated: false
         - text:
@@ -63,26 +64,27 @@ client:
     footer:
       links:
         - text:
-            en: "Ninux - Wireless Community Network"
-            it: "Ninux - Wireless Community Network"
+            en: "Ninux Basilicata"
+            it: "Ninux Basilicata"
+          url: "https://basilicata.ninux.org"
+          authenticated: false
+        - text:
+            en: "Ninux"
+            it: "Ninux"
           url: "https://ninux.org"
           authenticated: false
         - text:
-            en: "OpenWISP2"
-            it: "OpenWISP2"
-          url: "https://openwisp.org/"
+            en: "Downloads Firmware"
+            it: "Downloads Firmware"
+          url: "https://downloads.nnxx.ninux.org/"
           authenticated: false
-        - text:
-            en: "link-3"
-            it: "link-3"
-          url: "https://link-3.com"
-          authenticated: true
-          verified: true
+          verified: false
       after_html:
         en: "Copyright"
         it: "Copyright"
 
     registration_form:
+      auto_select_first_plan: false
       input_fields:
         phone_number: {}
         username:
@@ -132,34 +134,43 @@ client:
       login_page_link: true
 
     contact_page:
-      email: "ninux.basilicata@gmail.com"
-      # helpdesk: "+39 3495432617"
+      email: "info@nnxx.ninux.org"
+      helpdesk: "+39 349 54 32 617"
       social_links:
         - alt:
-            en: "twitter"
-            it: "twitter"
+            en: "X"
+            it: "X"
           icon: "twitter.svg"
-          url: "https://twitter.com/ninuxorg"
+          url: "https://x.com/ninuxorg"
         - alt:
             en: "facebook"
             it: "facebook"
           icon: "facebook.svg"
-          url: "https://www.facebook.com/groups/ninux.basilicata"
-        - alt:
-            en: "telegram"
-            it: "telegram"
-          icon: "Telegram_logo.svg"
-          url: "https://t.me/ninuxorg"
+          url: "https://www.facebook.com/ninuxorg"
 
     status_page:
       links:
         - text:
             en: "Change your password"
-            it: "Cambia la password"
+            it: "Cambia la tua password"
           url: "/{orgSlug}/change-password/"
+      radius_usage_enabled: true
+
     login_form:
-      social_login:
-        links: null
+#      social_login:
+#        links:
+#          - text:
+#              en: "Login with Facebook"
+#            url: "#facebook"
+#            icon: "facebook.svg"
+#          - text:
+#              en: "Login with Google"
+#            icon: "google.svg"
+#            url: "#google"
+#          - text:
+#              en: "Login with X"
+#            icon: "twitter.svg"
+#            url: "#twitter"
       input_fields:
         username:
           type: "email"
@@ -188,8 +199,8 @@ client:
       homepage_link: true
 
     captive_portal_login_form:
-      method: post
-      action: "http://192.168.182.1:3990/login/"
+      method: get
+      action: https://wifiauth.nnxx.ninux.org:3990/login
       fields:
         username: auth_user
         password: auth_pass
@@ -198,13 +209,13 @@ client:
         - name: zone
           value: zone_name
         - name: redirurl
-          value: "https://wifi.nnxx.ninux.org/basilicata/status"
+          value: https://wifi.nnxx.ninux.org/basilicata/status
         - name: accept
           value: accept
 
     captive_portal_logout_form:
       method: post
-      action: "https://wifi.nnxx.ninux.org/basilicata/logout/"
+      action: https://wifiauth.nnxx.ninux.org:3990/logoff
       fields:
         id: logout_id
       additional_fields: []
@@ -216,4 +227,4 @@ client:
     it: "privacy-it.md"
   terms_and_conditions:
     en: "terms-en.md"
-    it: "termini-condizioni.md"
+    it: "terms-it.md"

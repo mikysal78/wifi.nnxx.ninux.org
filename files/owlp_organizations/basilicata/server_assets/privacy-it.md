@@ -1,8 +1,8 @@
 # Privacy Policy
 
-- La vostra privacy è importante per noi. È politica di Ninux rispettare la tua privacy riguardo a qualsiasi informazione che possiamo raccogliere da te attraverso wifi.nnxx.ninux.org.
+- La vostra privacy è importante per noi. La politica di Ninux è quella di rispettare la tua privacy riguardo a qualsiasi informazione che possiamo raccogliere da te attraverso il servizio HotSpot Ninux.
 
-- Chiediamo informazioni personali solo quando ne abbiamo veramente bisogno per fornirvi un servizio. Le raccogliamo con mezzi corretti e leciti, con la vostra consapevolezza e il vostro consenso. Inoltre, vi informiamo del motivo per cui le stiamo raccogliendo e di come verranno utilizzate.
+- Chiediamo informazioni personali solo quando ne abbiamo veramente bisogno per fornire un servizio all'utente. Le raccogliamo con mezzi corretti e leciti, con la tua consapevolezza e il tuo consenso. Inoltre, vi informiamo del motivo per cui le raccogliamo e di come verranno utilizzate.
 
 - Conserviamo le informazioni raccolte solo per il tempo necessario a fornirvi il servizio richiesto. I dati che conserviamo saranno protetti con mezzi commercialmente accettabili per evitare perdite e furti, nonché accessi, divulgazioni, copie, usi o modifiche non autorizzati.
 
@@ -12,4 +12,4 @@
 
 - Siete liberi di rifiutare la richiesta dei vostri dati personali, con la consapevolezza che potremmo non essere in grado di fornirvi alcuni dei servizi desiderati.
 
-- L'uso del nostro sito web sarà considerato come un'accettazione delle nostre pratiche in materia di privacy e informazioni personali. Se avete domande su come gestiamo i dati degli utenti e le informazioni personali, non esitate a contattarci.
+- L'uso continuato del nostro sito web sarà considerato come un'accettazione delle nostre pratiche in materia di privacy e informazioni personali. Se avete domande su come gestiamo i dati degli utenti e le informazioni personali, non esitate a contattarci.

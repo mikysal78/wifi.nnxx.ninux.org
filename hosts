@@ -1,7 +1,20 @@
 ## Global Vars
 [all:vars]
-ansible_python_interpreter=/usr/bin/python3
+#ansible_python_interpreter=/usr/bin/python3.9
 ansible_port=2400
 
+[common]
+openwisp.nnxx.ninux.org ansible_host=10.27.22.11 ansible_user=root
+
+[openwisp2]
+openwisp.nnxx.ninux.org ansible_user=root
+
 [CaptivePortal]
-wifi.nnxx.ninux.org ansible_user=root
+wifi.nnxx.ninux.org ansible_host=10.27.22.11 ansible_user=root
+
+[openvpn]
+openvpn.nnxx.ninux.org ansible_user=root
+
+[dns_server]
+ns1-basilicata.ninux.org ansible_host=141.95.18.146
+ns2-basilicata.ninux.org ansible_host=51.178.46.85
